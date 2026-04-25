@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FutureForward - Your Career Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">FutureForward</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-translate="home">Home</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li><a href="info.html" data-translate="info">Info</a></li>
+                <li><a href="app.html" class="nav-cta" data-translate="takeSurvey">Take Survey</a></li>
+                <li class="nav-dropdown">
+                    <button class="dropdown-toggle">More</button>
+                    <div class="dropdown-menu">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <button class="dropdown-toggle" id="lang-toggle">EN</button>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="setLanguage('en')">English 🇬🇧</a>
+                        <a href="#" onclick="setLanguage('ru')">Русский 🇷🇺</a>
+                        <a href="#" onclick="setLanguage('kz')">Қазақша 🇰🇿</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="policy-section" style="padding-top: 40px;">
+        <div class="container">
+            <h2 data-translate="aboutFutureForward" style="margin-bottom: 30px; text-align: center;">About FutureForward</h2>
+            
+            <div class="policy-content" style="max-width: 900px; margin: 0 auto;">
+                
+                <!-- Mission -->
+                <div style="margin-bottom: 40px; padding: 25px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1)); border-radius: 12px; border-left: 4px solid var(--primary-color);">
+                    <h2 data-translate="ourMission" style="margin-bottom: 15px; color: var(--primary-color);">Our Mission</h2>
+                    <p data-translate="missionDescription" style="font-size: 1.05rem; line-height: 1.8;">We believe every student deserves clear guidance and practical tools to navigate their future confidently. FutureForward simplifies the complex journey of career planning, education funding, and professional development into three manageable steps.</p>
+                </div>
+
+                <!-- What We Do -->
+                <h2 data-translate="whatWeDo" style="margin: 40px 0 20px 0;">What We Do</h2>
+                <p data-translate="whatWeDoDesc" style="margin-bottom: 25px; font-size: 1.05rem; line-height: 1.8;">FutureForward combines intelligence, personalization, and practicality to help you make smarter decisions about your future. Our platform provides:</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
+                    <div style="padding: 20px; background: var(--background-light); border-radius: 8px; border-top: 3px solid var(--primary-color);">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-color);">🎯 <span data-translate="careerMatchInfo">Career Matching</span></h3>
+                        <p data-translate="careerMatchInfoDesc" style="color: var(--text-gray);">Discover careers aligned with your interests, skills, and goals using real job market data.</p>
+                    </div>
+
+                    <div style="padding: 20px; background: var(--background-light); border-radius: 8px; border-top: 3px solid var(--secondary-color);">
+                        <h3 style="margin-bottom: 10px; color: var(--secondary-color);">💰 <span data-translate="fundingGuidance">Funding Guidance</span></h3>
+                        <p data-translate="fundingGuidanceDesc" style="color: var(--text-gray);">Understand education costs and explore scholarships, grants, loans, and other funding options.</p>
+                    </div>
+
+                    <div style="padding: 20px; background: var(--background-light); border-radius: 8px; border-top: 3px solid var(--accent-color);">
+                        <h3 style="margin-bottom: 10px; color: var(--accent-color);">📋 <span data-translate="cvBuilding">CV Building</span></h3>
+                        <p data-translate="cvBuildingDesc" style="color: var(--text-gray);">Create professional CVs and portfolios that showcase your achievements and potential.</p>
+                    </div>
+                </div>
+
+                <!-- Why Choose -->
+                <h2 data-translate="whyChooseFutureForward" style="margin: 40px 0 20px 0;">Why Choose FutureForward?</h2>
+                
+                <ul style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 40px;">
+                    <li style="margin-bottom: 15px;"><strong data-translate="datadriven">Data-Driven:</strong> <span data-translate="datadrivenDesc">Our recommendations are based on real job market trends and verified information.</span></li>
+                    <li style="margin-bottom: 15px;"><strong data-translate="personalized">Personalized:</strong> <span data-translate="personalizedDesc">Every recommendation is tailored to your unique profile and circumstances.</span></li>
+                    <li style="margin-bottom: 15px;"><strong data-translate="practical">Practical:</strong> <span data-translate="practicalDesc">We focus on actionable insights you can use immediately to advance your career.</span></li>
+                    <li style="margin-bottom: 15px;"><strong data-translate="accessible">Accessible:</strong> <span data-translate="accessibleDesc">Free and available to all students, regardless of background or location.</span></li>
+                    <li style="margin-bottom: 15px;"><strong data-translate="multilingual">Multilingual:</strong> <span data-translate="multilingualDesc">FutureForward supports multiple languages to serve diverse communities.</span></li>
+                </ul>
+
+                <!-- Privacy & Security -->
+                <h2 data-translate="privacyAndSecurity" style="margin: 40px 0 20px 0;">Privacy & Security</h2>
+                <p data-translate="privacyAndSecurityDesc" style="margin-bottom: 25px; font-size: 1.05rem; line-height: 1.8;">Your privacy is important to us. All information you provide through FutureForward is used solely to provide personalized career guidance and is protected with industry-standard security measures. We never share your data with third parties without your explicit consent.</p>
+                <p style="text-align: center;"><a href="privacy.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Read more about our Privacy Policy</a></p>
+
+                <!-- Getting Started -->
+                <h2 data-translate="gettingStarted" style="margin: 40px 0 20px 0;">Getting Started</h2>
+                <p data-translate="gettingStartedDesc" style="margin-bottom: 25px; font-size: 1.05rem; line-height: 1.8;">Ready to discover your path forward? Our assessment takes just 10 minutes and requires no credit card. Click "Take Survey" to begin your journey toward a brighter future.</p>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='app.html'" data-translate="startSurvey">Start Survey</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="copyright">&copy; 2026 FutureForward. Empowering students to build their future with confidence.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

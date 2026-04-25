@@ -615,27 +615,119 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================ */
 
 function goToStep(step) {
+    // Validate current step before allowing progression
+    if (step > currentStep && !validateCurrentStep()) {
+        return; // Don't proceed if validation fails
+    }
+
     // Hide all steps
     document.querySelectorAll('.step').forEach(el => el.style.display = 'none');
     document.getElementById('resultsSection').classList.remove('active');
-    
+
     // Show selected step
     if (step <= totalSteps) {
         document.getElementById(`step${step}`).style.display = 'block';
         currentStep = step;
     }
-    
+
     // Update progress bar
     updateProgressBar();
-    
+
     // Scroll to top
     document.querySelector('.assessment-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function validateCurrentStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    let isValid = false;
+
+    // Clear previous validation messages
+    currentStepElement.querySelectorAll('.validation-error').forEach(el => el.remove());
+
+    switch(currentStep) {
+        case 1:
+            // Check if at least one interest is selected
+            const interestsSelected = currentStepElement.querySelector('input[name="interests"]:checked');
+            if (!interestsSelected) {
+                showValidationError(currentStepElement, 'Please select your main interests to continue.');
+                return false;
+            }
+            // Check if at least one skill is selected
+            const skillsSelected = currentStepElement.querySelector('input[name="skills"]:checked');
+            if (!skillsSelected) {
+                showValidationError(currentStepElement, 'Please select your strongest skill to continue.');
+                return false;
+            }
+            // Check if work style is selected
+            const workStyleSelected = currentStepElement.querySelector('input[name="workStyle"]:checked');
+            if (!workStyleSelected) {
+                showValidationError(currentStepElement, 'Please select your preferred work style to continue.');
+                return false;
+            }
+            isValid = true;
+            break;
+
+        case 2:
+            // Check if education type is selected
+            const educationSelected = currentStepElement.querySelector('input[name="educationType"]:checked');
+            if (!educationSelected) {
+                showValidationError(currentStepElement, 'Please select your education path to continue.');
+                return false;
+            }
+            // Check if budget is selected
+            const budgetSelected = currentStepElement.querySelector('input[name="budget"]:checked');
+            if (!budgetSelected) {
+                showValidationError(currentStepElement, 'Please select your budget range to continue.');
+                return false;
+            }
+            // Scholarship interest is optional, so no validation needed
+            isValid = true;
+            break;
+
+        case 3:
+            // Step 3 fields are optional, so always valid
+            isValid = true;
+            break;
+    }
+
+    return isValid;
+}
+
+function showValidationError(stepElement, message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'validation-error';
+    errorDiv.textContent = message;
+    errorDiv.style.cssText = `
+        color: #dc2626;
+        background-color: rgba(220, 38, 38, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.2);
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 15px;
+        font-size: 0.95rem;
+        text-align: center;
+    `;
+
+    // Insert error message after the button group
+    const buttonGroup = stepElement.querySelector('.button-group');
+    if (buttonGroup) {
+        buttonGroup.insertAdjacentElement('afterend', errorDiv);
+    } else {
+        stepElement.appendChild(errorDiv);
+    }
+
+    // Scroll to error message
+    errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function updateProgressBar() {
     const progress = (currentStep / totalSteps) * 100;
     document.getElementById('progressFill').style.width = progress + '%';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateProgressBar();
+});
 
 /* ============================================
    FORM SUBMISSION AND ANALYSIS
