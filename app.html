@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment - FutureForward</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .app-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .assessment-wrapper {
+            flex: 1;
+            padding: 40px 20px;
+            background-color: var(--background-light);
+        }
+
+        .assessment-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--background-white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: var(--border-color);
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .step-indicator {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .radio-option:hover {
+            border-color: var(--primary-color);
+            background-color: var(--background-light);
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 12px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: space-between;
+        }
+
+        .btn-secondary {
+            background-color: var(--border-color);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: #cbd5e1;
+        }
+
+        .results-section {
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .result-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .result-card p {
+            color: var(--text-gray);
+            margin-bottom: 8px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .success-message {
+            color: #10b981;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #ecfdf5;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">FutureForward</a></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-dropdown">
+                        <button class="dropdown-toggle">More</button>
+                        <div class="dropdown-menu">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Assessment Section -->
+        <section class="assessment-wrapper">
+            <div class="assessment-content">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <!-- Step 1: Career Match -->
+                <div class="step" id="step1">
+                    <div class="step-indicator">Step 1 of 3</div>
+                    <h2 class="step-title">Career Match</h2>
+                    <p class="step-description">Tell us about your interests and skills to discover suitable careers.</p>
+
+                    <form id="careerForm">
+                        <div class="form-group">
+                        <label>What are your main interests?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="interests" value="Technology"> Technology & Innovation
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="interests" value="Creative"> Creative Arts & Design
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="interests" value="Healthcare"> Healthcare
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="interests" value="Business"> Business & Finance
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="interests" value="Science"> Science & Research
+                            </label>
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What's your strongest skill?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="skills" value="Problem-Solving"> Problem-Solving
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="skills" value="Communication"> Communication
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="skills" value="Creativity"> Creativity
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="skills" value="Leadership"> Leadership
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How do you prefer to work?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="workStyle" value="Team"> In a team
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="workStyle" value="Independent"> Independently
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="workStyle" value="Both"> Mix of both
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(1)">Skip</button>
+                            <button type="button" class="btn btn-primary" onclick="goToStep(2)">Next</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 2: Funding Plan -->
+                <div class="step" id="step2" style="display: none;">
+                    <div class="step-indicator">Step 2 of 3</div>
+                    <h2 class="step-title">Funding Plan</h2>
+                    <p class="step-description">Let's calculate education costs and explore funding options for you.</p>
+
+                    <form id="fundingForm">
+                        <div class="form-group">
+                            <label>What education path interests you?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="educationType" value="University"> University (4-year)
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="educationType" value="College"> College (2-year)
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="educationType" value="Vocational"> Vocational Training
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="educationType" value="Bootcamp"> Coding Bootcamp
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Estimated annual budget for education?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="budget" value="5000"> Under $5,000
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="budget" value="15000"> $5,000 - $15,000
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="budget" value="30000"> $15,000 - $30,000
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="budget" value="50000"> $30,000+
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Are you interested in scholarships?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="scholarshipInterest" value="Yes" checked> Yes
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="scholarshipInterest" value="No"> No
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(1)">Back</button>
+                            <button type="button" class="btn btn-primary" onclick="goToStep(3)">Next</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 3: CV Builder -->
+                <div class="step" id="step3" style="display: none;">
+                    <div class="step-indicator">Step 3 of 3</div>
+                    <h2 class="step-title">CV Builder</h2>
+                    <p class="step-description">Build your professional profile with achievements and experience.</p>
+
+                    <form id="cvForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name (Optional)</label>
+                            <input type="text" name="fullName" id="fullName" placeholder="Your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address (Optional)</label>
+                            <input type="email" name="email" id="email" placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Add to Resume - Experience or Projects (Optional)</label>
+                            <textarea name="experience" id="experience" placeholder="E.g., Built a mobile app, Managed a school project..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="achievements">Add to Resume - Key Achievements (Optional)</label>
+                            <textarea name="achievements" id="achievements" placeholder="E.g., Dean's list, Team captain, Won a competition..."></textarea>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(2)">Back</button>
+                            <button type="button" class="btn btn-primary" onclick="submitAssessment()">Get Results</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results-section" id="resultsSection">
+                    <div class="success-message">✓ Assessment Complete! Here are your personalized results.</div>
+
+                    <h2 style="margin-bottom: 30px;">Your Personalized Results</h2>
+
+                    <!-- Career Results -->
+                    <div class="result-card">
+                        <h3>🎯 Recommended Career Path</h3>
+                        <p><strong>Top Match:</strong> <span id="recommendedCareer">Software Engineer</span></p>
+                        <p><strong>Match Score:</strong> <span id="careerScore">92</span>%</p>
+                        <p id="careerDescription">Based on your interests and skills, this career aligns perfectly with your profile.</p>
+                    </div>
+
+                    <!-- University Recommendation -->
+                    <div class="result-card">
+                        <h3>🎓 Recommended University (Kazakhstan)</h3>
+                        <p><strong>University:</strong> <span id="universityName">Nazarbayev University</span></p>
+                        <p><strong>Location:</strong> <span id="universityCity">Nur-Sultan</span></p>
+                        <p><strong>Specialization:</strong> <span id="universitySpecialization">Computer Science & Engineering</span></p>
+                        <p><strong>Ranking:</strong> <span id="universityRank">Top-ranked in Central Asia</span></p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a id="mapLink2GIS" href="#" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                                📍 View on 2GIS
+                            </a>
+                            <a id="mapLinkGoogle" href="#" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                                📍 View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Funding Results -->
+                    <div class="result-card">
+                        <h3>💰 Estimated Funding Plan</h3>
+                        <p><strong>Total Education Cost (Annual):</strong> $<span id="totalCost">0</span></p>
+                        <div class="results-grid">
+                            <div>
+                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;">Scholarships Available</p>
+                                <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: bold;">$<span id="scholarships">0</span></p>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;">Estimated Loans Needed</p>
+                                <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: bold;">$<span id="loans">0</span></p>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;">Your Potential Budget</p>
+                                <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: bold;">$<span id="budget">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV Preview -->
+                    <div class="result-card">
+                        <h3>📋 Your Professional CV Preview</h3>
+                        <p><strong>Name:</strong> <span id="cvName">Your Name</span></p>
+                        <p><strong>Email:</strong> <span id="cvEmail">your.email@example.com</span></p>
+                        <p><strong>Key Skills:</strong> <span id="cvSkillsDisplay">Problem-Solving, Communication</span></p>
+                        <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(99, 102, 241, 0.2);">
+                            <strong>Experience Summary:</strong><br>
+                            <span id="cvExperienceDisplay" style="color: var(--text-gray); white-space: pre-wrap;"></span>
+                        </p>
+                    </div>
+
+                    <div class="button-group" style="margin-top: 40px;">
+                        <button type="button" class="btn btn-primary" onclick="downloadResults()">Download Results (Word)</button>
+                        <button type="button" class="btn btn-secondary" onclick="startOver()">Take Assessment Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 FutureForward. Empowering students to build their future with confidence.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app-logic.js"></script>
+</body>
+</html>
