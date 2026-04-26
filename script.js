@@ -330,7 +330,33 @@ const translations = {
         
         // Additional Footer & Navigation
         reviews: "Reviews",
-        contact: "Contact"
+        contact: "Contact",
+        
+        // Results Section
+        assessmentComplete: "✓ Assessment Complete! Here are your personalized results.",
+        yourPersonalizedResults: "Your Personalized Results",
+        recommendedCareerPath: "🎯 Recommended Career Path",
+        topMatch: "Top Match:",
+        matchScore: "Match Score:",
+        recommendedUniversity: "🎓 Recommended University (Kazakhstan)",
+        university: "University:",
+        location: "Location:",
+        specialization: "Specialization:",
+        ranking: "Ranking:",
+        viewOn2GIS: "📍 View on 2GIS",
+        viewOnGoogleMaps: "📍 View on Google Maps",
+        estimatedFundingPlan: "💰 Estimated Funding Plan",
+        totalEducationCost: "Total Education Cost (Annual):",
+        scholarshipsAvailable: "Scholarships Available",
+        estimatedLoansNeeded: "Estimated Loans Needed",
+        yourPotentialBudget: "Your Potential Budget",
+        yourProfessionalCV: "📋 Your Professional CV Preview",
+        name: "Name:",
+        email: "Email:",
+        keySkills: "Key Skills:",
+        experienceSummary: "Experience Summary:",
+        downloadResults: "Download Results (Word)",
+        takeAssessmentAgain: "Take Assessment Again"
     },
     ru: {
         // Navigation
@@ -659,7 +685,33 @@ const translations = {
         
         // Additional Footer & Navigation
         reviews: "Отзывы",
-        contact: "Контакты"
+        contact: "Контакты",
+        
+        // Results Section
+        assessmentComplete: "✓ Оценка завершена! Вот ваши персонализированные результаты.",
+        yourPersonalizedResults: "Ваши персонализированные результаты",
+        recommendedCareerPath: "🎯 Рекомендуемый путь карьеры",
+        topMatch: "Лучшее соответствие:",
+        matchScore: "Оценка соответствия:",
+        recommendedUniversity: "🎓 Рекомендуемый университет (Казахстан)",
+        university: "Университет:",
+        location: "Местоположение:",
+        specialization: "Специальность:",
+        ranking: "Рейтинг:",
+        viewOn2GIS: "📍 Смотреть на 2GIS",
+        viewOnGoogleMaps: "📍 Смотреть на Google Картах",
+        estimatedFundingPlan: "💰 Приблизительный финансовый план",
+        totalEducationCost: "Общая стоимость образования (годовая):",
+        scholarshipsAvailable: "Доступные стипендии",
+        estimatedLoansNeeded: "Приблизительно необходимые кредиты",
+        yourPotentialBudget: "Ваш потенциальный бюджет",
+        yourProfessionalCV: "📋 Предварительный просмотр вашего профессионального резюме",
+        name: "Имя:",
+        email: "Электронная почта:",
+        keySkills: "Ключевые навыки:",
+        experienceSummary: "Краткое описание опыта:",
+        downloadResults: "Загрузить результаты (Word)",
+        takeAssessmentAgain: "Пройти оценку снова"
     },
     kz: {
         // Navigation
@@ -988,8 +1040,35 @@ const translations = {
         
         // Additional Footer & Navigation
         reviews: "Пікірлер",
-        contact: "Байланыс"
+        contact: "Байланыс",
+        
+        // Results Section
+        assessmentComplete: "✓ Бағалау аяқталды! Міне сіздің персоналды нәтижелеріңіз.",
+        yourPersonalizedResults: "Сіздің персоналды нәтижелеріңіз",
+        recommendedCareerPath: "🎯 Ұсынылатын мансап жолы",
+        topMatch: "Ең жақсы сәйкестік:",
+        matchScore: "Сәйкестік ұпайы:",
+        recommendedUniversity: "🎓 Ұсынылатын университет (Қазақстан)",
+        university: "Университет:",
+        location: "Орналасуы:",
+        specialization: "Мамандығы:",
+        ranking: "Рейтингі:",
+        viewOn2GIS: "📍 2GIS-те қараңыз",
+        viewOnGoogleMaps: "📍 Google Картаға қараңыз",
+        estimatedFundingPlan: "💰 Болжамды қаржыландыру жоспары",
+        totalEducationCost: "Білім беруді ауырлығы (жылдық):",
+        scholarshipsAvailable: "Қол жетімді стипендиялар",
+        estimatedLoansNeeded: "Болжамды қажетті ұйымдар",
+        yourPotentialBudget: "Сіздің әлеуетті бюджетіңіз",
+        yourProfessionalCV: "📋 Сіздің кәсіби CV алдын ала қарауыңыз",
+        name: "Аты:",
+        email: "Электрондық пошта:",
+        keySkills: "Негізгі дағдылар:",
+        experienceSummary: "Тәжірибе түйінтігі:",
+        downloadResults: "Нәтижелерді жүктеу (Word)",
+        takeAssessmentAgain: "Бағалауды қайта өтіңіз"
     }
+
 };
 
 function scrollToSection(sectionId) {

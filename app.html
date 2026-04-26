@@ -535,30 +535,30 @@
 
                 <!-- Results Section -->
                 <div class="results-section" id="resultsSection">
-                    <div class="success-message">✓ Assessment Complete! Here are your personalized results.</div>
+                    <div class="success-message" data-translate="assessmentComplete">✓ Assessment Complete! Here are your personalized results.</div>
 
-                    <h2 style="margin-bottom: 30px;">Your Personalized Results</h2>
+                    <h2 data-translate="yourPersonalizedResults" style="margin-bottom: 30px;">Your Personalized Results</h2>
 
                     <!-- Career Results -->
                     <div class="result-card">
-                        <h3>🎯 Recommended Career Path</h3>
-                        <p><strong>Top Match:</strong> <span id="recommendedCareer">Software Engineer</span></p>
-                        <p><strong>Match Score:</strong> <span id="careerScore">92</span>%</p>
+                        <h3 data-translate="recommendedCareerPath">🎯 Recommended Career Path</h3>
+                        <p><span data-translate="topMatch">Top Match:</span> <span id="recommendedCareer">Software Engineer</span></p>
+                        <p><span data-translate="matchScore">Match Score:</span> <span id="careerScore">92</span>%</p>
                         <p id="careerDescription">Based on your interests and skills, this career aligns perfectly with your profile.</p>
                     </div>
 
                     <!-- University Recommendation -->
                     <div class="result-card">
-                        <h3>🎓 Recommended University (Kazakhstan)</h3>
-                        <p><strong>University:</strong> <span id="universityName">Nazarbayev University</span></p>
-                        <p><strong>Location:</strong> <span id="universityCity">Nur-Sultan</span></p>
-                        <p><strong>Specialization:</strong> <span id="universitySpecialization">Computer Science & Engineering</span></p>
-                        <p><strong>Ranking:</strong> <span id="universityRank">Top-ranked in Central Asia</span></p>
+                        <h3 data-translate="recommendedUniversity">🎓 Recommended University (Kazakhstan)</h3>
+                        <p><span data-translate="university">University:</span> <span id="universityName">Nazarbayev University</span></p>
+                        <p><span data-translate="location">Location:</span> <span id="universityCity">Nur-Sultan</span></p>
+                        <p><span data-translate="specialization">Specialization:</span> <span id="universitySpecialization">Computer Science & Engineering</span></p>
+                        <p><span data-translate="ranking">Ranking:</span> <span id="universityRank">Top-ranked in Central Asia</span></p>
                         <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-                            <a id="mapLink2GIS" href="#" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <a id="mapLink2GIS" href="#" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;" data-translate="viewOn2GIS">
                                 📍 View on 2GIS
                             </a>
-                            <a id="mapLinkGoogle" href="#" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;">
+                            <a id="mapLinkGoogle" href="#" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;" data-translate="viewOnGoogleMaps">
                                 📍 View on Google Maps
                             </a>
                         </div>
@@ -566,19 +566,19 @@
 
                     <!-- Funding Results -->
                     <div class="result-card">
-                        <h3>💰 Estimated Funding Plan</h3>
-                        <p><strong>Total Education Cost (Annual):</strong> $<span id="totalCost">0</span></p>
+                        <h3 data-translate="estimatedFundingPlan">💰 Estimated Funding Plan</h3>
+                        <p><span data-translate="totalEducationCost">Total Education Cost (Annual):</span> $<span id="totalCost">0</span></p>
                         <div class="results-grid">
                             <div>
-                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;">Scholarships Available</p>
+                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;" data-translate="scholarshipsAvailable">Scholarships Available</p>
                                 <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: bold;">$<span id="scholarships">0</span></p>
                             </div>
                             <div>
-                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;">Estimated Loans Needed</p>
+                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;" data-translate="estimatedLoansNeeded">Estimated Loans Needed</p>
                                 <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: bold;">$<span id="loans">0</span></p>
                             </div>
                             <div>
-                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;">Your Potential Budget</p>
+                                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px;" data-translate="yourPotentialBudget">Your Potential Budget</p>
                                 <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: bold;">$<span id="budget">0</span></p>
                             </div>
                         </div>
@@ -586,19 +586,19 @@
 
                     <!-- CV Preview -->
                     <div class="result-card">
-                        <h3>📋 Your Professional CV Preview</h3>
-                        <p><strong>Name:</strong> <span id="cvName">Your Name</span></p>
-                        <p><strong>Email:</strong> <span id="cvEmail">your.email@example.com</span></p>
-                        <p><strong>Key Skills:</strong> <span id="cvSkillsDisplay">Problem-Solving, Communication</span></p>
+                        <h3 data-translate="yourProfessionalCV">📋 Your Professional CV Preview</h3>
+                        <p><span data-translate="name">Name:</span> <span id="cvName">Your Name</span></p>
+                        <p><span data-translate="email">Email:</span> <span id="cvEmail">your.email@example.com</span></p>
+                        <p><span data-translate="keySkills">Key Skills:</span> <span id="cvSkillsDisplay">Problem-Solving, Communication</span></p>
                         <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(99, 102, 241, 0.2);">
-                            <strong>Experience Summary:</strong><br>
+                            <span data-translate="experienceSummary"><strong>Experience Summary:</strong></span><br>
                             <span id="cvExperienceDisplay" style="color: var(--text-gray); white-space: pre-wrap;"></span>
                         </p>
                     </div>
 
                     <div class="button-group" style="margin-top: 40px;">
-                        <button type="button" class="btn btn-primary" onclick="downloadResults()">Download Results (Word)</button>
-                        <button type="button" class="btn btn-secondary" onclick="startOver()">Take Assessment Again</button>
+                        <button type="button" class="btn btn-primary" onclick="downloadResults()" data-translate="downloadResults">Download Results (Word)</button>
+                        <button type="button" class="btn btn-secondary" onclick="startOver()" data-translate="takeAssessmentAgain">Take Assessment Again</button>
                     </div>
                 </div>
             </div>
