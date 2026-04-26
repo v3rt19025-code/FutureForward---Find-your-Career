@@ -1,5 +1,5 @@
-/* ============================================
-   TRANSLATIONS
+﻿/* ============================================
+   TRANSLATIONS - CORRECTED
    ============================================ */
 
 const translations = {
@@ -910,46 +910,7 @@ const translations = {
         termsCommitment: "Біздің сіздің сөз бермесі",
         termsCommitmentText: "FutureForward пайдалану арқылы, сіз сіздің сәттілігі және құпиялылығына біздің міндеттемеге келісесіз.",
         termsInfoUse: "Ақпаратты пайдалану",
-        termsInfoUseIntro: "Сі,
-        
-        // Testimonials Section
-        whatStudentsSaying: "Студенттер не дейді",
-        realStudentsTrusted: "Нағыз студенттер FutureForward карьер жолдарын зерттеу, қаржыландыруды салыстыру және күштірек программалар құру үшін ишенді.",
-        testimonialsQ1: "\"FutureForward маған тез ережелік берді. Соңында мен қандай мансап жолы өз күш сторонамына сәйкес және оны өндіруге боларын түсіндім.\"",
-        testimonialsA1: "Мария Джонсон",
-        testimonialsA1Role: "Орта сынып оқушысы",
-        testimonialsQ2: "\"Қаржыландыру жоспарымены стипендиялар салыстыруға және бюджетті нақты екендігіне көмектеді. Бұл барлық процесс айтарлықтай төмен түсіндіреді.\"",
-        testimonialsA2: "Арман Р.",
-        testimonialsA2Role: "Әлеуметтік абитуриент",
-        testimonialsQ3: "\"Маған сауалнама қадам сайын мені басқарғанын ұнатты. Нәтижелер түсіну оңай болды және өте мотивтеңді.\"",
-        testimonialsA3: "Нурсултан К.",
-        testimonialsA3Role: "Болашақ студент",
-        
-        // Team Section
-        meetTeam: "FutureForward сыртындағы командамен танысыңыз",
-        teamIntro: "Студенттерді түгі әлемде беру іске ынамдыған студенттер тобы",
-        team1Name: "Рафаэль Алгуно",
-        team1Role: "Басқы әзілеуші",
-        team1Desc: "Өндіген әзілеуші FutureForward негіз платформасын құрасындағы ұнамдың өндіктігі мен пайдаланушы тәжірибесінің ескерімінде.",
-        team2Name: "Арнур Аманкельді",
-        team2Role: "Со-әзілеуші",
-        team2Desc: "Үйінде мансапты оңтайсыз сәйкестіктесу үшін базаның архитектурасын оңтайсыз және өндіктің бағалау алгоритмін интеграциялау.",
-        team3Name: "Данияр Дүйсебеков",
-        team3Role: "Дизайнер",
-        team3Desc: "Пайдаланушы интерфейсі дизайнері студенттердің сенімді және оңай мансап сапарын ғана құрасын өмсі интерфейс жасақан.",
-        team4Name: "Ростислав Сергеев",
-        team4Role: "Со-әзілеуші",
-        team4Desc: "Дизайнды өндіктің жағалау компоненттері оңтайсыз және барлық құрылғыларда арамсыз біліну әзілеуші.",
-        
-        // Demo Section Additional
-        softwareEngineer: "Бағдарлама әзілеушісі",
-        universityProgram: "Университет бағдарламасы",
-        alexJohnson: "Алекс Джонсон",
-        readMorePrivacy: "Біздің құпиялылық саясаты туралы көбірек оқыңыз",
-        
-        // Additional Footer & Navigation
-        reviews: "Пікірлер",
-        contact: "Байланыс"з біздің платформасы арқылы барлық ақпаратыңыз барлық ғана мақсатта ғана пайдаланылады:",
+        termsInfoUseIntro: "Сіз барлық ақпаратыңыз платформасы арқылы барлық ғана мақсатта ғана пайдаланылады:",
         termsEvalCareer: "Сіздің мансап сәйкестігі және әлеуетін бағалау",
         termsAccurateFunding: "Дәл қаржыландыру және білім құны талдауын ұсыну",
         termsProfessionalCV: "Кәсіби резюме және портфолио ұсыныстарын құру",
@@ -988,7 +949,46 @@ const translations = {
         pageNotFound: "Бет табылмады",
         pageNotFoundDesc: "Өкінішке орай, іздеп отырған беттіңіз табылмады. Ол ығыстырылуы, өшірілуі немесе сіз дұрыс емес URL енгіз екіші мүмкін.",
         goHome: "Басты бетке",
-        viewFAQ: "FAQ қараңыз"
+        viewFAQ: "FAQ қараңыз",
+        
+        // Testimonials Section
+        whatStudentsSaying: "Студенттер не дейді",
+        realStudentsTrusted: "Нағыз студенттер FutureForward карьер жолдарын зерттеу, қаржыландыруды салыстыру және күштірек программалар құру үшін ишенді.",
+        testimonialsQ1: "\"FutureForward маған тез ережелік берді. Соңында мен қандай мансап жолы өз күш сторонамына сәйкес және оны өндіруге боларын түсіндім.\"",
+        testimonialsA1: "Мария Джонсон",
+        testimonialsA1Role: "Орта сынып оқушысы",
+        testimonialsQ2: "\"Қаржыландыру жоспарымены стипендиялар салыстыруға және бюджетті нақты екендігіне көмектеді. Бұл барлық процесс айтарлықтай төмен түсіндіреді.\"",
+        testimonialsA2: "Арман Р.",
+        testimonialsA2Role: "Әлеуметтік абитуриент",
+        testimonialsQ3: "\"Маған сауалнама қадам сайын мені басқарғанын ұнатты. Нәтижелер түсіну оңай болды және өте мотивтеңді.\"",
+        testimonialsA3: "Нурсултан К.",
+        testimonialsA3Role: "Болашақ студент",
+        
+        // Team Section
+        meetTeam: "FutureForward сыртындағы командамен танысыңыз",
+        teamIntro: "Студенттерді түгі әлемде беру іске ынамдыған студенттер тобы",
+        team1Name: "Рафаэль Алгуно",
+        team1Role: "Басқы әзілеуші",
+        team1Desc: "Өндіген әзілеуші FutureForward негіз платформасын құрасындағы ұнамдың өндіктігі мен пайдаланушы тәжірибесінің ескерімінде.",
+        team2Name: "Арнур Аманкельді",
+        team2Role: "Со-әзілеуші",
+        team2Desc: "Үйінде мансапты оңтайсыз сәйкестіктесу үшін базаның архитектурасын оңтайсыз және өндіктің бағалау алгоритмін интеграциялау.",
+        team3Name: "Данияр Дүйсебеков",
+        team3Role: "Дизайнер",
+        team3Desc: "Пайдаланушы интерфейсі дизайнері студенттердің сенімді және оңай мансап сапарын ғана құрасын өмсі интерфейс жасақан.",
+        team4Name: "Ростислав Сергеев",
+        team4Role: "Со-әзілеуші",
+        team4Desc: "Дизайнды өндіктің жағалау компоненттері оңтайсыз және барлық құрылғыларда арамсыз біліну әзілеуші.",
+        
+        // Demo Section Additional
+        softwareEngineer: "Бағдарлама әзілеушісі",
+        universityProgram: "Университет бағдарламасы",
+        alexJohnson: "Алекс Джонсон",
+        readMorePrivacy: "Біздің құпиялылық саясаты туралы көбірек оқыңыз",
+        
+        // Additional Footer & Navigation
+        reviews: "Пікірлер",
+        contact: "Байланыс"
     }
 };
 
@@ -1000,16 +1000,18 @@ function scrollToSection(sectionId) {
 }
 
 /* ============================================
-   DROPDOWN MENU TOGGLE
+   MAIN INITIALIZATION - ALL ON DOM READY
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('=== INITIALIZATION START ===');
+    
+    /* STEP 1: DROPDOWN MENU TOGGLE */
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     const navDropdowns = document.querySelectorAll('.nav-dropdown');
     
     console.log('Initializing dropdowns. Found:', dropdownToggles.length, 'toggles and', navDropdowns.length, 'dropdowns');
     
-    // Properly bind each toggle to its parent dropdown
     dropdownToggles.forEach((toggle, idx) => {
         console.log('Setting up dropdown', idx, ':', toggle);
         
@@ -1018,26 +1020,22 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
             
-            // Get the parent nav-dropdown
             const parentDropdown = this.closest('.nav-dropdown');
             console.log('Parent dropdown:', parentDropdown);
             
             if (parentDropdown) {
-                // Close all other dropdowns
                 navDropdowns.forEach(d => {
                     if (d !== parentDropdown) {
                         d.classList.remove('active');
                     }
                 });
                 
-                // Toggle this one
                 parentDropdown.classList.toggle('active');
                 console.log('Dropdown toggled. Active:', parentDropdown.classList.contains('active'));
             }
         });
     });
     
-    // Close dropdown when a link is clicked
     const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
     dropdownLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -1045,7 +1043,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         navDropdowns.forEach(dropdown => {
             if (!dropdown.contains(e.target)) {
@@ -1053,41 +1050,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
-
-/* ============================================
-   CTA BUTTON HANDLER
-   ============================================ */
-
-function handleStartNow() {
-    // This would normally redirect to your app
-    console.log('Starting the journey...');
-    alert('Welcome to FutureForward! This is where the magic begins. 🚀\n\nRedirecting to the assessment...');
-    // Uncomment the line below when you have your app ready
-    // window.location.href = '/app';
-}
-
-/* ============================================
-   INTERSECTION OBSERVER - FADE IN ANIMATIONS
-   ============================================ */
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Animate elements on scroll
-document.addEventListener('DOMContentLoaded', () => {
+    
+    /* STEP 2: ANIMATIONS */
     const animatedElements = document.querySelectorAll('.feature-card, .demo-card, .stat');
     
     animatedElements.forEach(element => {
@@ -1096,14 +1060,8 @@ document.addEventListener('DOMContentLoaded', () => {
         element.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         observer.observe(element);
     });
-});
-
-/* ============================================
-   SMOOTH SCROLL BEHAVIOR
-   ============================================ */
-
-// Add active state to navigation links based on scroll position
-document.addEventListener('DOMContentLoaded', () => {
+    
+    /* STEP 3: SMOOTH SCROLL */
     const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
     const sections = document.querySelectorAll('section');
 
@@ -1126,22 +1084,89 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    
+    /* STEP 4: BUTTON HOVER EFFECTS */
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    /* STEP 5: STAT COUNTERS */
+    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    const animatedNumbers = new Set();
+    
+    const numberObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animatedNumbers.has(entry.target)) {
+                animatedNumbers.add(entry.target);
+                animateCountUp(entry.target);
+                numberObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    statNumbers.forEach(number => numberObserver.observe(number));
+    
+    /* STEP 6: DEMO COUNTERS */
+    const counters = document.querySelectorAll('.counter[data-target]');
+    const animatedCounters = new Set();
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animatedCounters.has(entry.target)) {
+                animatedCounters.add(entry.target);
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    /* STEP 7: HERO PARALLAX */
+    updateHeroParallax();
+    
+    /* STEP 8: LANGUAGE INITIALIZATION (LAST) */
+    const savedLang = localStorage.getItem('preferred-language') || 'en';
+    setLanguage(savedLang);
+    
+    console.log('=== INITIALIZATION COMPLETE ===');
 });
 
 /* ============================================
-   BUTTON HOVER EFFECTS
+   INTERSECTION OBSERVER - FADE IN ANIMATIONS
    ============================================ */
 
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px)';
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+        }
     });
-    
-    button.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
+}, observerOptions);
+
+/* ============================================
+   SMOOTH SCROLL BEHAVIOR
+   ============================================ */
 
 /* ============================================
    NUMBER COUNT-UP ANIMATION
@@ -1211,48 +1236,6 @@ function animateCounter(element, duration = 1500) {
     
     requestAnimationFrame(update);
 }
-
-// Observe stat numbers for count-up animation
-document.addEventListener('DOMContentLoaded', () => {
-    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
-    const animatedNumbers = new Set();
-    
-    const numberObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !animatedNumbers.has(entry.target)) {
-                animatedNumbers.add(entry.target);
-                animateCountUp(entry.target);
-                numberObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    statNumbers.forEach(number => numberObserver.observe(number));
-});
-
-// Observe demo counters for count-up animation
-document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.counter[data-target]');
-    const animatedCounters = new Set();
-    
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !animatedCounters.has(entry.target)) {
-                animatedCounters.add(entry.target);
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    counters.forEach(counter => counterObserver.observe(counter));
-});
 
 /* ============================================
    PREVENT SCROLL JANK
@@ -1331,10 +1314,9 @@ function setLanguage(lang) {
     });
     
     // Close the dropdown
-    const navDropdown = document.querySelector('.nav-dropdown:last-child');
-    if (navDropdown) {
-        navDropdown.classList.remove('active');
-    }
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
     
     console.log('Language set to:', lang);
 }
@@ -1353,10 +1335,3 @@ const updateHeroParallax = () => {
 
 window.addEventListener('scroll', updateHeroParallax);
 window.addEventListener('resize', updateHeroParallax);
-document.addEventListener('DOMContentLoaded', updateHeroParallax);
-
-// Initialize language on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferred-language') || 'en';
-    setLanguage(savedLang);
-});

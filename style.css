@@ -114,6 +114,14 @@ body {
     color: inherit;
 }
 
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    display: block;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -359,6 +367,16 @@ body {
     background: rgba(255, 255, 255, 0.2);
     border: 4px solid rgba(255, 255, 255, 0.4);
     margin-bottom: 40px;
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.hero-logo-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    object-fit: contain;
+    display: block;
     animation: glow-pulse 3s ease-in-out infinite;
 }
 
@@ -652,17 +670,16 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.team-image-placeholder {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+.team-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 50%;
     margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: white;
+    display: block;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-position: center;
 }
 
 .team-card h3 {
