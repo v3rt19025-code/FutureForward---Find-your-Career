@@ -107,6 +107,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: inline-flex;
+    align-items: center;
 }
 
 .logo a {
@@ -115,11 +117,13 @@ body {
 }
 
 .navbar-logo {
-    height: 40px;
+    height: 32px;
     width: auto;
-    max-width: 180px;
+    max-width: 40px;
     object-fit: contain;
-    display: block;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .nav-links {
