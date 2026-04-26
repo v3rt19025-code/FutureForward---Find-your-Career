@@ -291,7 +291,46 @@ const translations = {
         pageNotFound: "Page Not Found",
         pageNotFoundDesc: "Sorry, the page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.",
         goHome: "Go Home",
-        viewFAQ: "View FAQ"
+        viewFAQ: "View FAQ",
+        
+        // Testimonials Section
+        whatStudentsSaying: "What students are saying",
+        realStudentsTrusted: "Real students trusted FutureForward to explore career paths, compare funding, and build stronger applications.",
+        testimonialsQ1: "\"FutureForward gave me clarity fast. I finally understood which career path fit my strengths and how to afford it.\"",
+        testimonialsA1: "Maria Johnson",
+        testimonialsA1Role: "High school senior",
+        testimonialsQ2: "\"The funding plan helped me compare scholarships and budget realistically. It made the entire process feel less overwhelming.\"",
+        testimonialsA2: "Arman R.",
+        testimonialsA2Role: "College applicant",
+        testimonialsQ3: "\"I liked how the survey guided me step-by-step. The results were easy to understand and very motivating.\"",
+        testimonialsA3: "Nursultan Q.",
+        testimonialsA3Role: "Future student",
+        
+        // Team Section
+        meetTeam: "Meet the Team Behind FutureForward",
+        teamIntro: "A group of students committed to empowering students worldwide",
+        team1Name: "Raphael Alguno",
+        team1Role: "Lead Developer",
+        team1Desc: "Developer who built the core FutureForward platform with a focus on performance and user experience.",
+        team2Name: "Arnur Amankeldy",
+        team2Role: "Co-Developer",
+        team2Desc: "Backend specialist who optimized database architecture and integrated complex assessment algorithms for accurate career matching.",
+        team3Name: "Daniyar Duisebekov",
+        team3Role: "Designer",
+        team3Desc: "UX/UI designer who crafted the intuitive interface ensuring students can navigate their career journey with confidence and ease.",
+        team4Name: "Rostislav Sergeev",
+        team4Role: "Co-Developer",
+        team4Desc: "Frontend developer who brought the design to life with responsive, accessible components that work seamlessly across all devices.",
+        
+        // Demo Section Additional
+        softwareEngineer: "Software Engineer",
+        universityProgram: "University Program",
+        alexJohnson: "Alex Johnson",
+        readMorePrivacy: "Read more about our Privacy Policy",
+        
+        // Additional Footer & Navigation
+        reviews: "Reviews",
+        contact: "Contact"
     },
     ru: {
         // Navigation
@@ -581,7 +620,46 @@ const translations = {
         pageNotFound: "Страница не найдена",
         pageNotFoundDesc: "К сожалению, страница, которую вы ищете, не существует. Она могла быть перемещена, удалена или вы ввели неправильный URL.",
         goHome: "На главную",
-        viewFAQ: "Посмотреть FAQ"
+        viewFAQ: "Посмотреть FAQ",
+        
+        // Testimonials Section
+        whatStudentsSaying: "Что говорят студенты",
+        realStudentsTrusted: "Настоящие студенты доверили FutureForward исследование путей карьеры, сравнение финансирования и создание более сильных приложений.",
+        testimonialsQ1: "\"FutureForward быстро дал мне ясность. Я наконец понял, какой путь карьеры подходит моим сильным сторонам и как его себе позволить.\"",
+        testimonialsA1: "Мария Джонсон",
+        testimonialsA1Role: "Ученица старшей школы",
+        testimonialsQ2: "\"План финансирования помог мне сравнить стипендии и бюджет реалистично. Это сделало весь процесс менее подавляющим.\"",
+        testimonialsA2: "Арман Р.",
+        testimonialsA2Role: "Абитуриент",
+        testimonialsQ3: "\"Мне нравилось, как опрос направлял меня пошагово. Результаты были легко понять и очень мотивирующие.\"",
+        testimonialsA3: "Нурсултан К.",
+        testimonialsA3Role: "Будущий студент",
+        
+        // Team Section
+        meetTeam: "Познакомьтесь с командой, стоящей за FutureForward",
+        teamIntro: "Группа студентов, стремящихся дать возможность студентам по всему миру",
+        team1Name: "Рафаэль Алгуно",
+        team1Role: "Главный разработчик",
+        team1Desc: "Разработчик, который построил основную платформу FutureForward с акцентом на производительность и пользовательский опыт.",
+        team2Name: "Арнур Аманкельди",
+        team2Role: "Со-разработчик",
+        team2Desc: "Специалист по бэкенду, который оптимизировал архитектуру базы данных и интегрировал сложные алгоритмы оценки для точного подбора карьеры.",
+        team3Name: "Данияр Дүйсебеков",
+        team3Role: "Дизайнер",
+        team3Desc: "Дизайнер пользовательского интерфейса, который создал интуитивный интерфейс, позволяющий студентам уверенно и легко ориентироваться в своей карьере.",
+        team4Name: "Ростислав Сергеев",
+        team4Role: "Со-разработчик",
+        team4Desc: "Разработчик фронтенда, который воплотил дизайн в жизнь отзывчивыми и доступными компонентами, которые безупречно работают на всех устройствах.",
+        
+        // Demo Section Additional
+        softwareEngineer: "Инженер по программному обеспечению",
+        universityProgram: "Университетская программа",
+        alexJohnson: "Алекс Джонсон",
+        readMorePrivacy: "Прочитайте подробнее о нашей политике конфиденциальности",
+        
+        // Additional Footer & Navigation
+        reviews: "Отзывы",
+        contact: "Контакты"
     },
     kz: {
         // Navigation
@@ -832,7 +910,46 @@ const translations = {
         termsCommitment: "Біздің сіздің сөз бермесі",
         termsCommitmentText: "FutureForward пайдалану арқылы, сіз сіздің сәттілігі және құпиялылығына біздің міндеттемеге келісесіз.",
         termsInfoUse: "Ақпаратты пайдалану",
-        termsInfoUseIntro: "Сіз біздің платформасы арқылы барлық ақпаратыңыз барлық ғана мақсатта ғана пайдаланылады:",
+        termsInfoUseIntro: "Сі,
+        
+        // Testimonials Section
+        whatStudentsSaying: "Студенттер не дейді",
+        realStudentsTrusted: "Нағыз студенттер FutureForward карьер жолдарын зерттеу, қаржыландыруды салыстыру және күштірек программалар құру үшін ишенді.",
+        testimonialsQ1: "\"FutureForward маған тез ережелік берді. Соңында мен қандай мансап жолы өз күш сторонамына сәйкес және оны өндіруге боларын түсіндім.\"",
+        testimonialsA1: "Мария Джонсон",
+        testimonialsA1Role: "Орта сынып оқушысы",
+        testimonialsQ2: "\"Қаржыландыру жоспарымены стипендиялар салыстыруға және бюджетті нақты екендігіне көмектеді. Бұл барлық процесс айтарлықтай төмен түсіндіреді.\"",
+        testimonialsA2: "Арман Р.",
+        testimonialsA2Role: "Әлеуметтік абитуриент",
+        testimonialsQ3: "\"Маған сауалнама қадам сайын мені басқарғанын ұнатты. Нәтижелер түсіну оңай болды және өте мотивтеңді.\"",
+        testimonialsA3: "Нурсултан К.",
+        testimonialsA3Role: "Болашақ студент",
+        
+        // Team Section
+        meetTeam: "FutureForward сыртындағы командамен танысыңыз",
+        teamIntro: "Студенттерді түгі әлемде беру іске ынамдыған студенттер тобы",
+        team1Name: "Рафаэль Алгуно",
+        team1Role: "Басқы әзілеуші",
+        team1Desc: "Өндіген әзілеуші FutureForward негіз платформасын құрасындағы ұнамдың өндіктігі мен пайдаланушы тәжірибесінің ескерімінде.",
+        team2Name: "Арнур Аманкельді",
+        team2Role: "Со-әзілеуші",
+        team2Desc: "Үйінде мансапты оңтайсыз сәйкестіктесу үшін базаның архитектурасын оңтайсыз және өндіктің бағалау алгоритмін интеграциялау.",
+        team3Name: "Данияр Дүйсебеков",
+        team3Role: "Дизайнер",
+        team3Desc: "Пайдаланушы интерфейсі дизайнері студенттердің сенімді және оңай мансап сапарын ғана құрасын өмсі интерфейс жасақан.",
+        team4Name: "Ростислав Сергеев",
+        team4Role: "Со-әзілеуші",
+        team4Desc: "Дизайнды өндіктің жағалау компоненттері оңтайсыз және барлық құрылғыларда арамсыз біліну әзілеуші.",
+        
+        // Demo Section Additional
+        softwareEngineer: "Бағдарлама әзілеушісі",
+        universityProgram: "Университет бағдарламасы",
+        alexJohnson: "Алекс Джонсон",
+        readMorePrivacy: "Біздің құпиялылық саясаты туралы көбірек оқыңыз",
+        
+        // Additional Footer & Navigation
+        reviews: "Пікірлер",
+        contact: "Байланыс"з біздің платформасы арқылы барлық ақпаратыңыз барлық ғана мақсатта ғана пайдаланылады:",
         termsEvalCareer: "Сіздің мансап сәйкестігі және әлеуетін бағалау",
         termsAccurateFunding: "Дәл қаржыландыру және білім құны талдауын ұсыну",
         termsProfessionalCV: "Кәсіби резюме және портфолио ұсыныстарын құру",
@@ -890,17 +1007,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     const navDropdowns = document.querySelectorAll('.nav-dropdown');
     
-    dropdownToggles.forEach((toggle, index) => {
-        const dropdown = navDropdowns[index];
-        if (toggle && dropdown) {
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Close other dropdowns
-                navDropdowns.forEach(d => d.classList.remove('active'));
+    console.log('Initializing dropdowns. Found:', dropdownToggles.length, 'toggles and', navDropdowns.length, 'dropdowns');
+    
+    // Properly bind each toggle to its parent dropdown
+    dropdownToggles.forEach((toggle, idx) => {
+        console.log('Setting up dropdown', idx, ':', toggle);
+        
+        toggle.addEventListener('click', function(e) {
+            console.log('Dropdown button clicked:', this);
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Get the parent nav-dropdown
+            const parentDropdown = this.closest('.nav-dropdown');
+            console.log('Parent dropdown:', parentDropdown);
+            
+            if (parentDropdown) {
+                // Close all other dropdowns
+                navDropdowns.forEach(d => {
+                    if (d !== parentDropdown) {
+                        d.classList.remove('active');
+                    }
+                });
+                
                 // Toggle this one
-                dropdown.classList.toggle('active');
-            });
-        }
+                parentDropdown.classList.toggle('active');
+                console.log('Dropdown toggled. Active:', parentDropdown.classList.contains('active'));
+            }
+        });
     });
     
     // Close dropdown when a link is clicked
@@ -1194,29 +1328,6 @@ function setLanguage(lang) {
         if (currentTranslations[key]) {
             element.placeholder = currentTranslations[key];
         }
-    });
-    
-    // Update navigation links
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === 'index.html') link.textContent = currentTranslations.home;
-        else if (href === 'contact.html') link.textContent = currentTranslations.contact;
-        else if (href === 'info.html') link.textContent = currentTranslations.info || 'Info';
-        else if (link.classList.contains('nav-cta')) link.textContent = currentTranslations.takeSurvey;
-    });
-    
-    // Update dropdown buttons
-    const moreButton = document.querySelector('.nav-dropdown .dropdown-toggle:not(#lang-toggle)');
-    if (moreButton) moreButton.textContent = currentTranslations.more;
-    
-    // Update dropdown menu items
-    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
-    dropdownLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === 'privacy.html') link.textContent = currentTranslations.privacyPolicy;
-        else if (href === 'faq.html') link.textContent = currentTranslations.faq;
-        else if (href === 'terms.html') link.textContent = currentTranslations.termsOfService;
     });
     
     // Close the dropdown
