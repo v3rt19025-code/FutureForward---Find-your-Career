@@ -3,7 +3,7 @@
    ============================================ */
 
 let currentStep = 1;
-const totalSteps = 3;
+const totalSteps = 4;
 
 const professionDatabase = {
     'Technology-Problem-Solving-Independent': {
@@ -534,6 +534,96 @@ const kazakhUniversities = {
 };
 
 /* ============================================
+   GLOBAL UNIVERSITIES DATABASE
+   ============================================ */
+
+const globalUniversities = {
+    'Asia': {
+        'Kazakhstan': [
+            { name: 'Nazarbayev University', city: 'Nur-Sultan', rank: '1st in Kazakhstan', specialization: 'Engineering, IT, Business', website: 'nu.edu.kz', country: 'Kazakhstan' },
+            { name: 'Kazakh-British Technical University (KBTU)', city: 'Almaty', rank: 'Top Technical', specialization: 'IT, Engineering', website: 'kbtu.kz', country: 'Kazakhstan' },
+            { name: 'Al-Farabi Kazakh National University', city: 'Almaty', rank: 'Largest University', specialization: 'Multiple Disciplines', website: 'kaznu.kz', country: 'Kazakhstan' }
+        ],
+        'Japan': [
+            { name: 'Tokyo University', city: 'Tokyo', rank: 'Top University in Japan', specialization: 'Engineering, Science', website: 'u-tokyo.ac.jp', country: 'Japan' },
+            { name: 'Kyoto University', city: 'Kyoto', rank: 'Leading Research University', specialization: 'Science, Technology', website: 'kyoto-u.ac.jp', country: 'Japan' },
+            { name: 'Osaka University', city: 'Osaka', rank: 'Top Tech University', specialization: 'Engineering, IT', website: 'osaka-u.ac.jp', country: 'Japan' }
+        ],
+        'China': [
+            { name: 'Tsinghua University', city: 'Beijing', rank: 'Top University in China', specialization: 'Engineering, Technology', website: 'tsinghua.edu.cn', country: 'China' },
+            { name: 'Peking University', city: 'Beijing', rank: 'Leading Research University', specialization: 'Multiple Disciplines', website: 'pku.edu.cn', country: 'China' },
+            { name: 'Fudan University', city: 'Shanghai', rank: 'Top University', specialization: 'Business, Science', website: 'fudan.edu.cn', country: 'China' }
+        ],
+        'India': [
+            { name: 'Indian Institute of Technology (IIT Bombay)', city: 'Mumbai', rank: 'Premier Tech Institute', specialization: 'Engineering, IT', website: 'iitb.ac.in', country: 'India' },
+            { name: 'Indian Institute of Technology (IIT Delhi)', city: 'Delhi', rank: 'Top Engineering', specialization: 'Engineering', website: 'iitd.ac.in', country: 'India' },
+            { name: 'Delhi University', city: 'Delhi', rank: 'Leading University', specialization: 'Multiple Disciplines', website: 'du.ac.in', country: 'India' }
+        ],
+        'Singapore': [
+            { name: 'National University of Singapore (NUS)', city: 'Singapore', rank: 'Top Asia University', specialization: 'Engineering, Business', website: 'nus.edu.sg', country: 'Singapore' },
+            { name: 'Nanyang Technological University (NTU)', city: 'Singapore', rank: 'Leading Tech University', specialization: 'Engineering, Technology', website: 'ntu.edu.sg', country: 'Singapore' },
+            { name: 'Singapore University of Technology and Design', city: 'Singapore', rank: 'Innovative University', specialization: 'Technology, Design', website: 'sutd.edu.sg', country: 'Singapore' }
+        ],
+        'South Korea': [
+            { name: 'Seoul National University', city: 'Seoul', rank: 'Top University in Korea', specialization: 'Engineering, Science', website: 'snu.ac.kr', country: 'South Korea' },
+            { name: 'Korea Advanced Institute of Science and Technology (KAIST)', city: 'Daejeon', rank: 'Premier Tech University', specialization: 'Engineering, IT', website: 'kaist.ac.kr', country: 'South Korea' },
+            { name: 'Yonsei University', city: 'Seoul', rank: 'Leading University', specialization: 'Business, Engineering', website: 'yonsei.ac.kr', country: 'South Korea' }
+        ]
+    },
+    'Europe': {
+        'UK': [
+            { name: 'University of Oxford', city: 'Oxford', rank: 'Top University in Europe', specialization: 'Multiple Disciplines', website: 'ox.ac.uk', country: 'UK' },
+            { name: 'University of Cambridge', city: 'Cambridge', rank: 'Top University', specialization: 'Science, Engineering', website: 'cam.ac.uk', country: 'UK' },
+            { name: 'Imperial College London', city: 'London', rank: 'Leading Tech University', specialization: 'Engineering, Science', website: 'imperial.ac.uk', country: 'UK' }
+        ],
+        'Germany': [
+            { name: 'Technical University of Munich', city: 'Munich', rank: 'Top Tech University in Europe', specialization: 'Engineering, Technology', website: 'tum.de', country: 'Germany' },
+            { name: 'Heidelberg University', city: 'Heidelberg', rank: 'Leading Research University', specialization: 'Science, Medicine', website: 'uni-heidelberg.de', country: 'Germany' },
+            { name: 'Berlin Institute of Technology', city: 'Berlin', rank: 'Premier Tech University', specialization: 'Engineering, IT', website: 'tu-berlin.de', country: 'Germany' }
+        ],
+        'France': [
+            { name: 'PSL University (Paris Sciences et Lettres)', city: 'Paris', rank: 'Leading French University', specialization: 'Science, Technology', website: 'psl.eu', country: 'France' },
+            { name: 'Paris-Saclay University', city: 'Paris', rank: 'Top Engineering University', specialization: 'Engineering, Science', website: 'universite-paris-saclay.fr', country: 'France' },
+            { name: 'Sorbonne University', city: 'Paris', rank: 'Historic Leading University', specialization: 'Multiple Disciplines', website: 'sorbonne-universite.fr', country: 'France' }
+        ],
+        'Netherlands': [
+            { name: 'University of Amsterdam', city: 'Amsterdam', rank: 'Top University in Netherlands', specialization: 'Multiple Disciplines', website: 'uva.nl', country: 'Netherlands' },
+            { name: 'Delft University of Technology', city: 'Delft', rank: 'Leading Tech University', specialization: 'Engineering, Technology', website: 'tudelft.nl', country: 'Netherlands' },
+            { name: 'University of Utrecht', city: 'Utrecht', rank: 'Premier Research University', specialization: 'Science, Medicine', website: 'uu.nl', country: 'Netherlands' }
+        ],
+        'Switzerland': [
+            { name: 'ETH Zurich', city: 'Zurich', rank: 'Top Tech University in Europe', specialization: 'Engineering, Science', website: 'ethz.ch', country: 'Switzerland' },
+            { name: 'University of Zurich', city: 'Zurich', rank: 'Leading Research University', specialization: 'Multiple Disciplines', website: 'uzh.ch', country: 'Switzerland' },
+            { name: 'University of Bern', city: 'Bern', rank: 'Premier University', specialization: 'Science, Technology', website: 'unibe.ch', country: 'Switzerland' }
+        ]
+    },
+    'Americas': {
+        'USA': [
+            { name: 'Harvard University', city: 'Cambridge, MA', rank: 'Top University in World', specialization: 'Multiple Disciplines', website: 'harvard.edu', country: 'USA' },
+            { name: 'Stanford University', city: 'Stanford, CA', rank: 'Top Tech University', specialization: 'Engineering, Technology', website: 'stanford.edu', country: 'USA' },
+            { name: 'MIT (Massachusetts Institute of Technology)', city: 'Cambridge, MA', rank: 'Premier Tech University', specialization: 'Engineering, IT', website: 'mit.edu', country: 'USA' },
+            { name: 'University of California Berkeley', city: 'Berkeley, CA', rank: 'Top Public University', specialization: 'Engineering, Science', website: 'berkeley.edu', country: 'USA' },
+            { name: 'Yale University', city: 'New Haven, CT', rank: 'Ivy League University', specialization: 'Multiple Disciplines', website: 'yale.edu', country: 'USA' }
+        ],
+        'Canada': [
+            { name: 'University of Toronto', city: 'Toronto', rank: 'Top University in Canada', specialization: 'Engineering, Medicine', website: 'utoronto.ca', country: 'Canada' },
+            { name: 'University of British Columbia', city: 'Vancouver', rank: 'Leading Research University', specialization: 'Science, Engineering', website: 'ubc.ca', country: 'Canada' },
+            { name: 'McGill University', city: 'Montreal', rank: 'Top Research University', specialization: 'Multiple Disciplines', website: 'mcgill.ca', country: 'Canada' }
+        ],
+        'Mexico': [
+            { name: 'National Autonomous University of Mexico (UNAM)', city: 'Mexico City', rank: 'Top University in Latin America', specialization: 'Multiple Disciplines', website: 'unam.mx', country: 'Mexico' },
+            { name: 'Monterrey Institute of Technology and Higher Education (ITESM)', city: 'Monterrey', rank: 'Leading Private University', specialization: 'Engineering, Business', website: 'itesm.mx', country: 'Mexico' },
+            { name: 'Universidad Iberoamericana', city: 'Mexico City', rank: 'Premier Private University', specialization: 'Business, Engineering', website: 'ibero.mx', country: 'Mexico' }
+        ],
+        'Brazil': [
+            { name: 'University of São Paulo (USP)', city: 'São Paulo', rank: 'Top University in Brazil', specialization: 'Multiple Disciplines', website: 'usp.br', country: 'Brazil' },
+            { name: 'Brazilian Federal University (UFRJ)', city: 'Rio de Janeiro', rank: 'Leading Federal University', specialization: 'Engineering, Science', website: 'ufrj.br', country: 'Brazil' },
+            { name: 'Campinas State University (UNICAMP)', city: 'Campinas', rank: 'Top Research University', specialization: 'Engineering, Technology', website: 'unicamp.br', country: 'Brazil' }
+        ]
+    }
+};
+
+/* ============================================
    PROFESSION MATCHING ALGORITHM
    ============================================ */
 
@@ -574,6 +664,55 @@ function calculateMatchScore(interest, skill, workStyle) {
 function getUniversityRecommendation(professionName) {
     // Get university based on profession name
     return kazakhstanUniversities[professionName] || kazakhstanUniversities['Software Developer'];
+}
+
+function getGlobalUniversityRecommendations(region, country, interest) {
+    // If global selected, pick random region
+    if (region === 'Global') {
+        const regions = ['Asia', 'Europe', 'Americas'];
+        region = regions[Math.floor(Math.random() * regions.length)];
+    }
+
+    // Get universities for the region
+    const regionData = globalUniversities[region] || globalUniversities['Asia'];
+    
+    // If user specified a country, try to get universities from that country
+    if (country && country !== 'Not specified') {
+        // Try to find matching country (case insensitive)
+        for (let countryKey in regionData) {
+            if (countryKey.toLowerCase().includes(country.toLowerCase()) || country.toLowerCase().includes(countryKey.toLowerCase())) {
+                return regionData[countryKey].slice(0, 3); // Return top 3
+            }
+        }
+    }
+    
+    // Otherwise, get all universities from the region and pick top 3 varied countries
+    let allUniversities = [];
+    for (let countryKey in regionData) {
+        allUniversities = allUniversities.concat(regionData[countryKey]);
+    }
+    
+    // Return top 3, with preference for different countries
+    const recommendations = [];
+    const countriesUsed = new Set();
+    
+    for (let uni of allUniversities) {
+        if (recommendations.length >= 3) break;
+        if (!countriesUsed.has(uni.country)) {
+            recommendations.push(uni);
+            countriesUsed.add(uni.country);
+        }
+    }
+    
+    // If we still need more, add any universities
+    for (let uni of allUniversities) {
+        if (recommendations.length >= 3) break;
+        if (!recommendations.includes(uni)) {
+            recommendations.push(uni);
+        }
+    }
+    
+    return recommendations;
 }
 
 /* ============================================
@@ -688,6 +827,17 @@ function validateCurrentStep() {
             // Step 3 fields are optional, so always valid
             isValid = true;
             break;
+
+        case 4:
+            // Check if university region is selected
+            const regionSelected = currentStepElement.querySelector('input[name="universityRegion"]:checked');
+            if (!regionSelected) {
+                showValidationError(currentStepElement, 'Please select a university region to continue.');
+                return false;
+            }
+            // Language preference is optional
+            isValid = true;
+            break;
     }
 
     return isValid;
@@ -738,11 +888,19 @@ function submitAssessment() {
     const interest = document.querySelector('input[name="interests"]:checked')?.value || 'Technology';
     const skill = document.querySelector('input[name="skills"]:checked')?.value || 'Problem-Solving';
     const workStyle = document.querySelector('input[name="workStyle"]:checked')?.value || 'Team';
+    const learningStyle = document.querySelector('input[name="learningStyle"]:checked')?.value || 'Visual';
+    const workEnvironment = document.querySelector('input[name="workEnvironment"]:checked')?.value || 'Office';
+    const salaryPriority = document.querySelector('input[name="salaryPriority"]:checked')?.value || 'Balanced';
     
     // Get selected values from Step 2: Funding
     const educationType = document.querySelector('input[name="educationType"]:checked')?.value || 'University';
     const budget = document.querySelector('input[name="budget"]:checked')?.value || '15000';
     const scholarshipInterest = document.querySelector('input[name="scholarshipInterest"]:checked')?.value || 'Yes';
+    
+    // Get selected values from Step 4: University Location
+    const universityRegion = document.querySelector('input[name="universityRegion"]:checked')?.value || 'Asia';
+    const universityCountry = document.getElementById('universityCountry').value || 'Not specified';
+    const languagePreference = document.querySelector('input[name="languagePreference"]:checked')?.value || 'English';
     
     // Get optional info from Step 3: CV (NOT counted as answers)
     const fullName = document.getElementById('fullName').value || 'Student';
@@ -754,8 +912,8 @@ function submitAssessment() {
     const profession = findMatchingProfession(interest, skill, workStyle);
     const matchScore = calculateMatchScore(interest, skill, workStyle);
     
-    // Find university recommendation based on profession
-    const university = getUniversityRecommendation(profession.career);
+    // Find global universities based on region and country
+    const universityRecommendations = getGlobalUniversityRecommendations(universityRegion, universityCountry, interest);
     
     // Calculate funding
     const educationCost = educationCosts[educationType] || 20000;
@@ -770,6 +928,9 @@ function submitAssessment() {
         interest,
         skill,
         workStyle,
+        learningStyle,
+        workEnvironment,
+        salaryPriority,
         educationType,
         educationCost,
         budgetAmount,
@@ -779,7 +940,10 @@ function submitAssessment() {
         email,
         experience,
         achievements,
-        university
+        universityRegion,
+        universityCountry,
+        languagePreference,
+        universityRecommendations
     });
 }
 
@@ -799,18 +963,33 @@ function displayResults(data) {
     document.getElementById('loans').textContent = Math.round(data.loanAmount).toLocaleString();
     document.getElementById('budget').textContent = data.budgetAmount.toLocaleString();
     
-    // Populate university recommendation
-    document.getElementById('universityName').textContent = data.university.university;
-    document.getElementById('universityCity').textContent = data.university.city;
-    document.getElementById('universitySpecialization').textContent = data.university.specialization;
-    document.getElementById('universityRank').textContent = data.university.rank;
+    // Populate global university recommendations
+    const universitiesHTML = data.universityRecommendations.map((uni, index) => `
+        <div style="margin-bottom: 15px; padding: 15px; background-color: rgba(99, 102, 241, 0.05); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+            <p><strong>${index + 1}. ${uni.name}</strong></p>
+            <p><small>${uni.city}, ${uni.country}</small></p>
+            <p><small><strong>Specialization:</strong> ${uni.specialization}</small></p>
+            <p><small><strong>Ranking:</strong> ${uni.rank}</small></p>
+            <a href="https://${uni.website}" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 8px 15px; margin-top: 10px; font-size: 0.85rem; text-decoration: none; border-radius: 6px;">Visit Website</a>
+        </div>
+    `).join('');
     
-    // Create map links
-    const mapsUrl2GIS = `https://2gis.kz/search/${encodeURIComponent(data.university.university)}`;
-    const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(data.university.university + ' ' + data.university.city + ' Kazakhstan')}/`;
+    // Update or create universities section
+    let universitiesSection = document.getElementById('universitiesRecommendation');
+    if (!universitiesSection) {
+        // Create universities section if it doesn't exist
+        const careerResultCard = document.querySelector('.result-card');
+        universitiesSection = document.createElement('div');
+        universitiesSection.id = 'universitiesRecommendation';
+        universitiesSection.className = 'result-card';
+        careerResultCard.insertAdjacentElement('afterend', universitiesSection);
+    }
     
-    document.getElementById('mapLink2GIS').href = mapsUrl2GIS;
-    document.getElementById('mapLinkGoogle').href = googleMapsUrl;
+    universitiesSection.innerHTML = `
+        <h3>🎓 Recommended Universities in ${data.universityRegion}</h3>
+        <p><small><strong>Region:</strong> ${data.universityRegion} | <strong>Language Preference:</strong> ${data.languagePreference}</small></p>
+        ${universitiesHTML}
+    `;
     
     // Populate CV preview
     document.getElementById('cvName').textContent = data.fullName;

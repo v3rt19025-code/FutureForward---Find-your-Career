@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - FutureForward</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">FutureForward</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-translate="home">Home</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li><a href="info.html" data-translate="info">Info</a></li>
+                <li><a href="app.html" class="nav-cta" data-translate="takeSurvey">Take Survey</a></li>
+                <li class="nav-dropdown">
+                    <button class="dropdown-toggle">More</button>
+                    <div class="dropdown-menu">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <button class="dropdown-toggle" id="lang-toggle">EN</button>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="setLanguage('en')">English 🇬🇧</a>
+                        <a href="#" onclick="setLanguage('ru')">Русский 🇷🇺</a>
+                        <a href="#" onclick="setLanguage('kz')">Қазақша 🇰🇿</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Reviews Section -->
+    <section class="reviews-page">
+        <div class="container">
+            <h2 data-translate="shareYourFeedback">Share Your Feedback</h2>
+            <p class="reviews-intro" data-translate="helpUsImprove">Help us improve FutureForward by sharing your experience. Your honest feedback matters!</p>
+
+            <!-- Review Form -->
+            <div class="review-form-container">
+                <form id="reviewForm" class="review-form">
+                    <div class="form-group">
+                        <label for="rating" data-translate="rateYourExperience">Rate Your Experience *</label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="">
+                        <div class="rating-display" id="ratingDisplay">Select a rating</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review" data-translate="yourReview">Your Review *</label>
+                        <textarea id="review" name="review" placeholder="Share your experience with FutureForward..." rows="5" required></textarea>
+                        <small data-translate="minimumCharacters">Minimum 10 characters</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" data-translate="yourName">Your Name (Optional)</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <small data-translate="leaveBlankAnonymously">Leave blank to post anonymously</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" data-translate="submitReview">Submit Review</button>
+                </form>
+            </div>
+
+            <!-- Reviews Display -->
+            <div class="reviews-container">
+                <h3 data-translate="studentReviews">Student Reviews</h3>
+                <div id="reviewsList" class="reviews-list">
+                    <div class="reviews-placeholder">
+                        <p data-translate="noReviewsYet">No reviews yet. Be the first to share your experience!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="copyright">&copy; 2026 FutureForward. Empowering students to build their future with confidence.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('rating');
+        const ratingDisplay = document.getElementById('ratingDisplay');
+        let currentRating = 0;
+
+        const ratingLabels = {
+            1: '⭐ Poor',
+            2: '⭐⭐ Fair',
+            3: '⭐⭐⭐ Good',
+            4: '⭐⭐⭐⭐ Very Good',
+            5: '⭐⭐⭐⭐⭐ Excellent'
+        };
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                currentRating = this.dataset.rating;
+                ratingInput.value = currentRating;
+                ratingDisplay.textContent = ratingLabels[currentRating];
+                
+                // Update visual state
+                stars.forEach(s => {
+                    if(s.dataset.rating <= currentRating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseover', function() {
+                const hoverRating = this.dataset.rating;
+                stars.forEach(s => {
+                    if(s.dataset.rating <= hoverRating) {
+                        s.classList.add('hover');
+                    } else {
+                        s.classList.remove('hover');
+                    }
+                });
+            });
+        });
+
+        document.getElementById('starRating').addEventListener('mouseout', function() {
+            stars.forEach(s => s.classList.remove('hover'));
+        });
+
+        // Form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if(!ratingInput.value) {
+                alert('Please select a rating');
+                return;
+            }
+
+            if(document.getElementById('review').value.length < 10) {
+                alert('Review must be at least 10 characters');
+                return;
+            }
+
+            const review = {
+                rating: ratingInput.value,
+                text: document.getElementById('review').value,
+                name: document.getElementById('name').value || 'Anonymous',
+                date: new Date().toLocaleDateString()
+            };
+
+            // Get existing reviews from localStorage
+            let reviews = JSON.parse(localStorage.getItem('futureforwardReviews')) || [];
+            reviews.unshift(review);
+            localStorage.setItem('futureforwardReviews', JSON.stringify(reviews));
+
+            // Reset form
+            this.reset();
+            ratingInput.value = '';
+            ratingDisplay.textContent = 'Select a rating';
+            stars.forEach(s => s.classList.remove('active'));
+
+            // Refresh reviews display
+            displayReviews();
+
+            alert('Thank you for your review!');
+        });
+
+        function displayReviews() {
+            const reviews = JSON.parse(localStorage.getItem('futureforwardReviews')) || [];
+            const reviewsList = document.getElementById('reviewsList');
+
+            if(reviews.length === 0) {
+                reviewsList.innerHTML = '<div class="reviews-placeholder"><p>No reviews yet. Be the first to share your experience!</p></div>';
+                return;
+            }
+
+            reviewsList.innerHTML = reviews.map(review => `
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-rating">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+                        <div class="review-meta">
+                            <strong>${review.name}</strong>
+                            <span class="review-date">${review.date}</span>
+                        </div>
+                    </div>
+                    <p class="review-text">${review.text}</p>
+                </div>
+            `).join('');
+        }
+
+        // Load reviews on page load
+        displayReviews();
+    </script>
+</body>
+</html>

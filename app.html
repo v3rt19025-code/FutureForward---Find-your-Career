@@ -202,6 +202,7 @@
                             <a href="privacy.html">Privacy Policy</a>
                             <a href="faq.html">FAQ</a>
                             <a href="terms.html">Terms of Service</a>
+                            <a href="reviews.html">Reviews</a>
                         </div>
                     </li>
                     <li class="nav-dropdown">
@@ -225,7 +226,7 @@
 
                 <!-- Step 1: Career Match -->
                 <div class="step" id="step1">
-                    <div class="step-indicator" data-translate="step1Of3">Step 1 of 3</div>
+                    <div class="step-indicator" data-translate="step1Of4">Step 1 of 4</div>
                     <h2 class="step-title" data-translate="careerMatch">Career Match</h2>
                     <p class="step-description" data-translate="tellUsAboutInterests">Tell us about your interests and skills to discover suitable careers.</p>
 
@@ -284,6 +285,57 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label data-translate="learningStyle">What's your preferred learning style?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="learningStyle" value="Visual"> <span data-translate="visual">Visual (diagrams, charts, videos)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="learningStyle" value="Auditory"> <span data-translate="auditory">Auditory (lectures, discussions)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="learningStyle" value="Hands-on"> <span data-translate="handson">Hands-on (practical, experiential)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="learningStyle" value="Theory"> <span data-translate="theory">Theory & Analysis</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="workEnvironment">What work environment appeals to you most?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="workEnvironment" value="Office"> <span data-translate="office">Office Setting</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="workEnvironment" value="Remote"> <span data-translate="remote">Remote/Work from Home</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="workEnvironment" value="Hybrid"> <span data-translate="hybrid">Hybrid (Mix of both)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="workEnvironment" value="Outdoor"> <span data-translate="outdoor">Outdoor/Field Work</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="salaryVsFulfillment">Salary vs Job Fulfillment - what matters more to you?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="salaryPriority" value="High Salary"> <span data-translate="highSalary">High Salary (financial security)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="salaryPriority" value="Job Fulfillment"> <span data-translate="fulfillment">Job Fulfillment (passion & impact)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="salaryPriority" value="Balanced"> <span data-translate="balanced">Balanced (both equally)</span>
+                                </label>
+                            </div>
+                        </div>
+
                         <div class="button-group">
                             <button type="button" class="btn btn-primary" onclick="goToStep(2)" data-translate="next">Next</button>
                         </div>
@@ -292,7 +344,7 @@
 
                 <!-- Step 2: Funding Plan -->
                 <div class="step" id="step2" style="display: none;">
-                    <div class="step-indicator" data-translate="step2Of3">Step 2 of 3</div>
+                    <div class="step-indicator" data-translate="step2Of4">Step 2 of 4</div>
                     <h2 class="step-title" data-translate="fundingPlan">Funding Plan</h2>
                     <p class="step-description" data-translate="calculateEducationCosts">Let's calculate education costs and explore funding options for you.</p>
 
@@ -354,7 +406,7 @@
 
                 <!-- Step 3: CV Builder -->
                 <div class="step" id="step3" style="display: none;">
-                    <div class="step-indicator" data-translate="step3Of3">Step 3 of 3</div>
+                    <div class="step-indicator" data-translate="step3Of4">Step 3 of 4</div>
                     <h2 class="step-title" data-translate="cvBuilder">CV Builder</h2>
                     <p class="step-description" data-translate="buildProfessionalProfile">Build your professional profile with achievements and experience.</p>
 
@@ -381,6 +433,58 @@
 
                         <div class="button-group">
                             <button type="button" class="btn btn-secondary" onclick="goToStep(2)" data-translate="back">Back</button>
+                            <button type="button" class="btn btn-primary" onclick="goToStep(4)" data-translate="next">Next</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 4: University Location -->
+                <div class="step" id="step4" style="display: none;">
+                    <div class="step-indicator" data-translate="step4Of4">Step 4 of 4</div>
+                    <h2 class="step-title" data-translate="universityLocation">University Location</h2>
+                    <p class="step-description" data-translate="selectUniversityRegion">Where are you planning to study? Select your region to get matched with top universities.</p>
+
+                    <form id="universityForm">
+                        <div class="form-group">
+                            <label data-translate="region">Which region interests you?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="universityRegion" value="Asia"> <span data-translate="asia">Asia</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="universityRegion" value="Europe"> <span data-translate="europe">Europe</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="universityRegion" value="Americas"> <span data-translate="americas">Americas (North & South America)</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="universityRegion" value="Global"> <span data-translate="global">Global (Show all regions)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="country">Preferred country or city (optional)</label>
+                            <input type="text" name="universityCountry" id="universityCountry" placeholder="E.g., Japan, Germany, USA..." data-placeholder-translate="countryPlaceholder">
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="languagePreference">Language preference for studies (optional)</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="languagePreference" value="English"> <span data-translate="english">English</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="languagePreference" value="Local"> <span data-translate="localLanguage">Local Language</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="languagePreference" value="Any"> <span data-translate="anyLanguage">Any Language</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(3)" data-translate="back">Back</button>
                             <button type="button" class="btn btn-primary" onclick="submitAssessment()" data-translate="getResults">Get Results</button>
                         </div>
                     </form>
